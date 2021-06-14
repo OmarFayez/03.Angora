@@ -21,39 +21,59 @@
     </head>
 
     <body>
-        <div class="side-icon d-flex justify-content-center align-items-center rounded-sm">
-          <i class="fas fa-cogs  text-white "></i>
+
+        <!-- <div id="screenloading" class="screenloading">
+          <div class="spinner ">
+            <div class="double-bounce1"></div>
+            <div class="double-bounce2"></div>
+          </div>
+        </div> -->
+
+        <button id="btnUp" class="btn rounded-circle p-2  ">
+          <i class="fas fa-arrow-alt-circle-up text-white "></i>
+        </button>
+
+        <div class="toggleBar d-flex align-items-start">
+          <div class="colorsBoxContainer px-2 bg-light rounded-sm">
+            <h4>Colors :</h4>
+            <span class="d-inline-block colorBox"></span>
+            <span class="d-inline-block colorBox"></span>
+            <span class="d-inline-block colorBox"></span>
+            <span class="d-inline-block colorBox"></span>
+            <span class="d-inline-block colorBox"></span>
+          </div>
+          <div class="btnCog d-flex justify-content-center align-items-center rounded-sm">
+            <i class="fas fa-cog fa-spin text-white "></i>
+          </div>
         </div>
 
-        <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-white shadow-sm">
+
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top ">
           <div class="container-md">
-            <a class="navbar-brand py-2" href="#"><img src="images/logo-red.png" alt="angora"></a>
+            <a class="navbar-brand py-2" href="#"><img src="images/logo-white.png" alt="angora"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <i class="fas fa-sliders-h"></i>
             </button>
           
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav ml-auto ">
-                <li class="nav-item active">
-                  <a class="nav-link" href="#home">Home <span class="sr-only">(current)</span></a>
+                <li class="nav-item ">
+                  <a id="home1" class="nav-link activ" href="#home">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#about">About</a>
+                  <a id="about1" class="nav-link" href="#about">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#team">Team</a>
+                    <a id="team1" class="nav-link" href="#team">Team</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#projects">Projects</a>
+                    <a id="services1" class="nav-link" href="#services">Services</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#services">Services</a>
+                    <a id="blog1" class="nav-link" href="#blog">Blog</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#blog">Blog</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link " href="#contact">Contact</a>
+                    <a id="contact1" class="nav-link " href="#contact">Contact</a>
                 </li>
                 <li class="nav-item nav-icons  d-flex align-items-center ">
                     <a href=""> <i class="fab fa-facebook-f pl-4 "></i> </a>
@@ -104,10 +124,11 @@
 
             </div>
           </div>
-          <a href="#about">
-            <div class="scroll rounded-pill position-absolute  ">
+         
+            <div >
+              <a class="scroll rounded-pill position-absolute" href="#about"></a>
             </div>
-          </a>
+       
           
         </header>
         <!-- End Of Header -->
@@ -630,9 +651,11 @@
           </div>
         </div>
       </footer>
-
+      
       <script src="js/jquery-3.5.1.slim.min.js"></script>
+      <script src="js/jquery-3.6.0.min.js"></script>
       <script src="js/popper.min.js"></script>
       <script src="js/bootstrap.min.js"></script>
+      <script src="js/main.js"></script>
     </body>
 </html>

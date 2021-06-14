@@ -1,8 +1,10 @@
+
 body
 {
     font-family: 'Open Sans', sans-serif;
     font-size: 14;
     color: #666;
+    overflow: hidden;
 }
 h1,h2,h3,h4,h5,h6
 {
@@ -72,36 +74,138 @@ transform: translateY(-12%);
 {
     font-size: 18px;
 }
+/*  */
+#btnUp
+{
+    position: fixed;
+    bottom:40px;
+    right:40;
+    z-index: 9999;
+    display: none;
+    background-color: #f25454;
+    transition:background-color .5s ;
+}
+#btnUp:hover
+{
+    background-color: #f25454c2;
+}
+/*  */
+/* Cog */
+.toggleBar
+{
+    position: fixed;
+    left: 0;
+    top: 150px;
+    z-index: 99999999;
+}
+.colorBox
+{
+    width: 20px;
+    height: 20px;
+    background-color: #f25454;
+    cursor: pointer;
+
+}
+
+.btnCog
+{
+    color: white;
+    background-color: #333;
+    padding: 10px;
+    cursor: pointer;
+}
+/*  */
+/* Loadding Screen */
+#screenLoading
+{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 20000;
+    background-color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.spinner {
+    width: 55px;
+    height: 55px;
+    position: relative;
+  }
+  
+  .double-bounce1, .double-bounce2 {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #fff;
+    opacity: 0.7;
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+    -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
+    animation: sk-bounce 2.0s infinite ease-in-out;
+  }
+  
+  .double-bounce2 {
+    -webkit-animation-delay: -1.0s;
+    animation-delay: -1.0s;
+  }
+  
+  @-webkit-keyframes sk-bounce {
+    0%, 100% { -webkit-transform: scale(0.0) }
+    50% { -webkit-transform: scale(1.0) }
+  }
+  
+  @keyframes sk-bounce {
+    0%, 100% { 
+      transform: scale(0.0);
+      -webkit-transform: scale(0.0);
+    } 50% { 
+      transform: scale(1.0);
+      -webkit-transform: scale(1.0);
+    }
+  }
+/*  */
+
 /* End Of General */
 
 /* ---nav---- */
-.navbar-light .navbar-nav .active>.nav-link
-{
-    color: #f25454;
+.navbar{
+    transition: background-color .5s,padding .5s;
+   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+   padding:15px 0px;
 }
+
 .navbar-light .navbar-nav .nav-link 
 {
-    color:#282828;
+    color:#fff;
     font-family: 'Poppins', sans-serif;
-    font-size: 13px;
+    font-size: 16px;
     font-weight: 600;
     padding: 0 15;
     transition: color .3s;
 }
 .navbar-light .navbar-nav .nav-link:hover
 {
-    color: #f25454;
+    color: #f25454 !important;
  
+}
+.navbar-light .navbar-nav .activ
+{
+    color: #f25454 !important ;
 }
 .navbar-light .navbar-nav  i
 {
-    color:#282828;
+    color:#fff;
     font-size: 13;
     transition: color .3s;
 }
 .navbar-light .navbar-nav  i:hover
 {
-    color: #f25454;
+    color: #f25454 !important;
 }
 .navbar-light .navbar-toggler 
 {
