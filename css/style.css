@@ -506,6 +506,20 @@ background-color: #f25454c2;
 {
     background-color: #fafafa;
 }
+.services .service
+{
+transition:background-color .4s , box-shadow .4S;
+box-shadow:0rem .125rem .25rem rgba(0,0,0,.055) ;
+
+padding: 12;
+border-radius: 5px;
+
+}
+.services .service:hover
+{
+    background-color: #fff;
+    box-shadow:.2rem .25rem .25rem rgba(0,0,0,.065) ;
+}
 .services .end-part .service h3
 {
     font-size: 18px;

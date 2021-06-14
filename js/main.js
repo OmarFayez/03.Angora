@@ -1,10 +1,11 @@
 $(document).ready(function(){
 
+    //Remove ScreenLoading
     $("#screenloading").fadeOut(1500)
     $('body').css("overflow","auto")
 
 
-    //Function to Show ColorscONFIG
+    //Function to Show ColorsConfig
     let colorsBoxContainerWidth =$(`.colorsBoxContainer`).outerWidth()
     $(`.toggleBar`).css("left",-colorsBoxContainerWidth)
     $(`.btnCog`).click(function(){
@@ -37,7 +38,7 @@ $(document).ready(function(){
     }
 
 
-    // Smothing And Styling With Scroll
+    //Styling With Scroll
     $(window).scroll(function(){
 
         let aboutOffset=$("#about").offset().top
@@ -46,11 +47,12 @@ $(document).ready(function(){
         let blogOffset=$("#blog").offset().top
         let contactOffset=$("#contact").offset().top
         let wScroll=$(window).scrollTop()
+
         if(wScroll>=aboutOffset-70)
         {
             $("li a").removeClass("activ")
             $("#about1").addClass("activ")
-
+            
         $(".navbar").css("backgroundColor","#fff")
         $(".navbar").css("padding","10px 0px")
         $(".navbar-light .navbar-nav .nav-link").css("color","#282828")
@@ -98,17 +100,17 @@ $(document).ready(function(){
       
     })
 
-        // 
+        // To Move Smoothly With Links
         $(`a[href^="#"]`).click(function(e){
             // $("li a").removeClass("activ")
             // $(this).addClass("activ")
             let linkHref=$(e.target).attr(`href`)
             let sectionOffset=$(linkHref).offset().top
-            $(`html,body`).animate({scrollTop:sectionOffset},1500)
+            $(`html,body`).animate({scrollTop:sectionOffset},1200)
             })
         
-            
-    $(`#btnUp`).click(function(){
-        $(`html,body`).animate({scrollTop:0},1000) 
-    })
+        // Move To Top Of Site
+        $(`#btnUp`).click(function(){
+            $(`html,body`).animate({scrollTop:0},1000) 
+        })
 })
