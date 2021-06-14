@@ -96,7 +96,7 @@ transform: translateY(-12%);
     position: fixed;
     left: 0;
     top: 150px;
-    z-index: 99999999;
+    z-index: 99999;
 }
 .colorBox
 {
@@ -123,7 +123,7 @@ transform: translateY(-12%);
     right: 0;
     left: 0;
     bottom: 0;
-    z-index: 20000;
+    z-index: 9999999;
     background-color: #333;
     display: flex;
     align-items: center;
