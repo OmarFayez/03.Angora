@@ -557,7 +557,7 @@ color: #f25454;
     height: 100px;
     margin-right: 3px;
     margin-left: 3px;
-    margin-bottom: 70px;
+    margin-bottom: 55px;
     text-indent: 0;
     cursor: pointer;
     background-color: #fff;
@@ -576,6 +576,9 @@ color: #f25454;
 {
     position: absolute;
     top: 110%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
 }
 .reviews .carousel-indicators li .caption p
 {
@@ -668,23 +671,6 @@ background-color: #f25454c2;
 }
 
 
-.links .arrow
-{
-    top: 0;
-    left:50%;
-    transform: translate(-50% ,-50%);  
-}
-.links .arrow .icon
-{
-    width: 50px;
-    height: 50px;
-    background-color: #f25454c2;
-    transition:background-color .4s ;
-}
-.links .arrow .icon:hover
-{
-    background-color: #f25454;  
-}
 .links .caption h5
 {
     font-weight:600;
@@ -806,4 +792,15 @@ visibility: hidden;
     }
 }   
 
+@media all and (max-width:558px)
+{
+    .carousel-indicators li {
+        box-sizing: content-box;
+        width: 60;
+        height: 60;
+    }
+    .carousel-inner .carousel-item p {
+        font-size: 18px;
+    };
+}
 
