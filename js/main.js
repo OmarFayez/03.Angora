@@ -52,7 +52,7 @@ $(document).ready(function(){
         {
             $("li a").removeClass("activ")
             $("#about1").addClass("activ")
-            
+        $(".navbar .fa-sliders-h").css("color","#000")
         $(".navbar").css("backgroundColor","#fff")
         $(".navbar").css("padding","10px 0px")
         $(".navbar-light .navbar-nav .nav-link").css("color","#282828")
@@ -61,12 +61,18 @@ $(document).ready(function(){
         $(".navbar-light .navbar-nav  i ").css("color","#282828")
         $("nav img").attr("src","images/logo-red.png")
         $(`#btnUp`).fadeIn(500)
+        let progressBars= Array.from(document.querySelectorAll(".about .progress-bar"))
+        for(let i of progressBars)
+        {
+            i.classList.add("animateMe")
+
+        }
         }
         else
         {
                 $("li a").removeClass("activ")
                 $("#home1").addClass("activ")
-                
+            $(".navbar .fa-sliders-h").css("color","#fff")
             $(".navbar").css("backgroundColor","transparent")
             $(".navbar").css("padding","15px 0px")
             $(".navbar").css("borderBottom","1px solid rgba(255, 255, 255, 0.2)")
@@ -77,6 +83,7 @@ $(document).ready(function(){
             $("nav img").attr("src","images/logo-white.png")
             $(`#btnUp`).fadeOut(500)   
         }
+
         if(wScroll>=teamOffset-50)
         {
             $("li a").removeClass("activ")
