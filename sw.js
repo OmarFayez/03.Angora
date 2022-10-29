@@ -1,4 +1,4 @@
-const cacheName='Angora-v7'
+const cacheName='Angora-v8'
 // Fetch Assets Static
 // It's better not to remove these static assets 
 // APP Shell -> Main files which won't change like css files and js files
