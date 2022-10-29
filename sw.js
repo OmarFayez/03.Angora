@@ -1,4 +1,4 @@
-const cacheName='Angora-v8'
+const cacheName='Angora-v10'
 // Fetch Assets Static
 // It's better not to remove these static assets 
 // APP Shell -> Main files which won't change like css files and js files
@@ -43,6 +43,7 @@ self.addEventListener("fetch", (fetchEvent) =>{
     // caches.match(fetchEvent.request).then(res=>res || fetch(fetchEvent.request))
 
     // Save Assets And retrieve them dynamic
+    // Cache First Strategy
     caches.match(fetchEvent.request).then(res=>res || fetch(fetchEvent.request).then(fetchResult=>{
       return caches.open(cacheName).then(cache=>{
         cache.put(fetchEvent.request,fetchResult.clone())
