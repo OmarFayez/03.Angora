@@ -1,4 +1,7 @@
-const cacheName='Angora-v6'
+const cacheName='Angora-v7'
+// Fetch Assets Static
+// It's better not to remove these static assets 
+// APP Shell -> Main files which won't change like css files and js files
 const assets=[
     '/',
     '/index.html',
@@ -35,9 +38,18 @@ self.addEventListener("activate", (activateEvent) =>{
 );
 
 self.addEventListener("fetch", (fetchEvent) =>{
-  console.log("fetchEvent")
   fetchEvent.respondWith(
-    caches.match(fetchEvent.request).then(res=>res || fetch(fetchEvent.request))
+    // Fetch Assets Static
+    // caches.match(fetchEvent.request).then(res=>res || fetch(fetchEvent.request))
+
+    // Save Assets And retrieve them dynamic
+    caches.match(fetchEvent.request).then(res=>res || fetch(fetchEvent.request).then(fetchResult=>{
+      return caches.open(cacheName).then(cache=>{
+        cache.put(fetchEvent.request,fetchResult.clone())
+        return fetchResult
+      })
+    }))
+
   )
 }
 );
